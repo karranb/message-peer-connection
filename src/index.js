@@ -1,10 +1,9 @@
+const DEFAULT_WEBRTC_SERVER = 'stun:stun.l.google.com:19302'
+const DEFAULT_ICE_SERVER = { urls: DEFAULT_WEBRTC_SERVER }
+
 const PeerConnection = (config = {}) => {
-  const DEFAULT_WEBRTC_SERVER = 'stun:stun.l.google.com:19302'
-
-  const server = { urls: DEFAULT_WEBRTC_SERVER }
-
   let state = {
-    pc: new RTCPeerConnection({ iceServers: [server] }),
+    pc: new RTCPeerConnection({ iceServers: [DEFAULT_ICE_SERVER] }),
     ...config,
   }
 
@@ -133,8 +132,11 @@ const PeerConnection = (config = {}) => {
       return functions()
     }
 
+    const getLocalDescriptionSDP = () => state.pc.localDescription.sdp
+
     return {
       close,
+      getLocalDescriptionSDP,
       setPC,
       getState,
       setState: updateState,
