@@ -112,6 +112,7 @@ Listener function executed when an offer is set, it receives two arguments [onic
 
 - [x] Readme
 - [ ] Example folder
+- [ ] Tests
 
 
 ## References
