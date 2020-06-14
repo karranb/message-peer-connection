@@ -4,6 +4,9 @@
   "description": "WebRTC Peer Connection abstraction for messages exchanges.",
   "main": "dist/main.js",
   "repository": "https://github.com/karranb/message-peer-connection.git",
+  "files": [
+    "dist/main.js"
+  ],
   "author": "Karran Besen <karranrb@gmail.com>",
   "license": "MIT",
   "scripts": {
