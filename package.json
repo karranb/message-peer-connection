@@ -1,6 +1,6 @@
 {
   "name": "message-peer-connection",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "WebRTC Peer Connection abstraction for messages exchanges.",
   "main": "dist/main.js",
   "repository": "https://github.com/karranb/message-peer-connection.git",
